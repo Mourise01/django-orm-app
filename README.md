@@ -19,11 +19,26 @@ Write your own steps
 
 ## PROGRAM
 
-Include your code here
+```python
+from django.db import models
+from django.contrib import admin
+# Create your models here.
+class employement(models.Model):
+    employementnumber = models.IntegerField()
+    employementname = models.CharField(max_length=100)
+    age = models.IntegerField() 
+    email = models.EmailField()
+    place = models.CharField(max_length=100)
+    designation = models.CharField(max_length=100)
+    salary = models.CharField(max_length=100)
+class EmployementAdmin(admin.ModelAdmin):
+    list_display = ('employementnumber','employementname','age','email','place','designation','salary')
+```
 
 ## OUTPUT
+![output](./imasge/Screenshot%20from%202023-01-20%2009-36-19.png)
 
-Include the screenshot of your admin page.
+
 
 
 ## RESULT
